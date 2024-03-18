@@ -32,8 +32,8 @@ jobs:
           pip install pipenv
           pipenv install
         
-      - name: Install dependencies
-        run: python manage.py collectstatic 
+      - name: Create Collectstatic file folder
+        run: pipenv run manage.py collectstatic 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
       - name: Zip artifact for deployment
